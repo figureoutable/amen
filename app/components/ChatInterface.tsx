@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useChat } from "@ai-sdk/react";
 
 export default function ChatInterface() {
-    const { messages, sendMessage, isLoading, error } = useChat();
-    const [input, setInput] = useState("");
+   const { messages, sendMessage, status, error } = useChat();
+   const isLoading = status === "streaming" || status === "submitted";    const [input, setInput] = useState("");
     const [hasStarted, setHasStarted] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
 

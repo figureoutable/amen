@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Environment
+
+The chat uses [OpenRouter](https://openrouter.ai), so you can use any of 300+ models with one API key.
+
+1. Get an API key at [openrouter.ai/keys](https://openrouter.ai/keys).
+2. In `.env.local` set:
+   - `OPENROUTER_API_KEY` — your OpenRouter API key (required).
+   - `OPENROUTER_MODEL` — optional; defaults to `openai/gpt-4o-mini`. Use any [OpenRouter model id](https://openrouter.ai/models) (e.g. `anthropic/claude-3.5-sonnet`, `google/gemini-2.0-flash`).
+
 ## Getting Started
 
 First, run the development server:
